@@ -121,20 +121,19 @@ def test_get_profile():
     client.post("/api/users/register/", payload)
     client.post("/api/users/login/", dict(username="test111@test.com", password="super-secret"))
     response = client.get("http://localhost:7000/#/profile")
-    assert response.status_code == 400
-    # data = response.data
-    # assert data["name"] == "testing123"
+    assert response.status_code == 200
+
 
 
 # @pytest.mark.django_db
 # def test_logout():
-#     payload = dict(
-#         name="testing123",
-#         email="test111@test.com",
-#         password="super-secret"
-#     )
-#
-#     client.post("/api/users/register/", payload)
-#     client.post("/api/users/login/", dict(username="test111@test.com", password="super-secret"))
-#     response = client.post("/api/users/logout/")
-#     assert response.status_code == 200
+    # payload = dict(
+    #     name="testing123",
+    #     email="test111@test.com",
+    #     password="super-secret"
+    # )
+    #
+    # client.post("/api/users/register/", payload)
+    # client.post("/api/users/login/", dict(username="test111@test.com", password="super-secret"))
+    # response = client.post("/api/users/logout/")
+    # assert response.status_code == 200

@@ -4,6 +4,8 @@ from rest_framework.test import APIClient
 from django.contrib.auth.models import User
 from base.models import Product, Review
 
+client = APIClient()
+
 
 def test_new_product_creation(create_product):
     count = Product.objects.all().count()
@@ -46,7 +48,6 @@ def test_delete_review(create_review):
     assert count == 0
 
 
-
 # @pytest.mark.parametrize(
 #     "name,price,brand,countInStock,category,description,validity",
 #
@@ -69,11 +70,17 @@ def test_delete_review(create_review):
 #     assert form.is_valid() is validity
 
 # Api test  - Integration testing
-# def test_api_product_creation():
-#     client = APIClient()
-#     response = client.post("/api/products/create/")
+# def test_api_product_creation(new_superuser):
+#
+#     payload = dict(
+#         user=User,
+#         name="Product Name",
+#         price=0,
+#         brand="Sample brand ",
+#         countInStock=0,
+#         category="Sample category",
+#         description="testing description "
+#     )
+#     response = client.post("/api/products/create/", payload)
 #     # data = response.data
 #     assert response.status_code == 200
-
-# def test_exmp():
-#     assert 1 == 1
