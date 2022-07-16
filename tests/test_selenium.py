@@ -103,7 +103,7 @@ class test_browser_with_selenium(LiveServerTestCase):
         time.sleep(2)
         assert self.driver.find_element(By.CSS_SELECTOR, ".card h2").text == "ORDER SUMMARY"
 
-    def test_searching_product(self):
+    def test_search_product(self):
         self.driver.find_element(By.NAME, "q").click()
         self.driver.find_element(By.NAME, "q").send_keys("iphone")
         self.driver.find_element(By.CSS_SELECTOR, ".p-2").click()
