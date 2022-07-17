@@ -11,9 +11,9 @@ fake = Faker()
 
 @pytest.fixture()
 def chrome_driver_init(request):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_driver = webdriver.Chrome(executable_path=r"./chromedriver", options=chrome_options)
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    chrome_driver = webdriver.Chrome(executable_path=r"./chromedriver")
     request.cls.driver = chrome_driver
     chrome_driver.get('http://localhost:7000/')
     chrome_driver.set_window_size(1552, 832)

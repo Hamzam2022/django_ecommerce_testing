@@ -101,7 +101,7 @@ def test_login_user():
     )
     client.post("/api/users/register/", payload)
     response = client.post("/api/users/login/", dict(username="test11@test.com", password="super-secret"))
-    assert response.status_code == 400
+    assert response.status_code == 200
 
 
 @pytest.mark.django_db
