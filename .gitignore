@@ -1,1 +1,8 @@
 /**/env
+Dockerfile
+requirements.txt
+pytest.ini
+runtime.txt
+chromedriver.exe
+db.sqlite3
+Procfile
