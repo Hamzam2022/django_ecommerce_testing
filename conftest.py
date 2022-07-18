@@ -1,7 +1,6 @@
 import pytest
 from django.contrib.auth.models import User
 from rest_framework.templatetags.rest_framework import data
-
 from base.models import Product, Order, OrderItem, ShippingAddress, Review
 
 

@@ -11,9 +11,9 @@ fake = Faker()
 
 @pytest.fixture()
 def chrome_driver_init(request):
-    # chrome_options = Options()
-    # chrome_options.add_argument("--headless")
-    chrome_driver = webdriver.Chrome(executable_path=r"./chromedriver")
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_driver = webdriver.Chrome(executable_path=r"./chromedriver", options=chrome_options)
     request.cls.driver = chrome_driver
     chrome_driver.get('http://localhost:7000/')
     chrome_driver.set_window_size(1552, 832)
@@ -109,24 +109,3 @@ class test_browser_with_selenium(LiveServerTestCase):
         self.driver.find_element(By.CSS_SELECTOR, ".p-2").click()
         time.sleep(3)
         assert self.driver.find_element(By.CSS_SELECTOR, ".col-xl-3:nth-child(2) strong").text in "iphone XS MAX"
-
-# class TestTestlogin():
-#     def setup_method(self, method):
-#         self.driver = webdriver.Chrome()
-#         self.vars = {}
-#
-#     def teardown_method(self, method):
-#         self.driver.quit()
-
-
-# tests without fixture
-# class testBrowser1 (LiveServerTestCase):
-#     def test_example(self):
-#         chrome_options = Options()
-#         chrome_options.add_argument("--headless")
-#
-#         driver= webdriver.Chrome("./chromedriver",options=chrome_options)
-#         # driver.get(("%s%s" %(self.live_server_url,"")))
-#         driver.get('http://localhost:7000/admin/')
-#         # time.sleep(5)
-#         assert "Log in | Django site admin" in driver.title
