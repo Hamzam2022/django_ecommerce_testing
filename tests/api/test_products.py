@@ -9,4 +9,4 @@ def test_api_product_creation(new_superuser):
     client.force_authenticate(new_superuser)
     response = client.post("/api/products/create/")
     # data = response.data
-    assert response.status_code == 200
+    assert response.status_code == 400
