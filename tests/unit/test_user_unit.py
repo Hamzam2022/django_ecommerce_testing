@@ -7,10 +7,10 @@ from django.contrib.auth.models import User
 #     assert count == 1
 #
 #
-# def test_superuser_creation(new_superuser):
-#     count = User.objects.all().count()
-#     assert count == 1
-#
+def test_superuser_creation(new_superuser):
+    count = User.objects.all().count()
+    assert count == 2
+
 #
 # def test_user_creation1(new_user):
 #     assert isinstance(new_user, User) is True
