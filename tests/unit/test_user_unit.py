@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 #
 def test_user_creation(new_user):
     count = User.objects.all().count()
-    assert count == 2
+    assert count == 1
 #
 #
 # def test_superuser_creation(new_superuser):
