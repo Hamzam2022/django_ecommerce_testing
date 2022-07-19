@@ -2,14 +2,14 @@ import pytest
 from django.contrib.auth.models import User
 
 #
-# def test_user_creation(new_user):
-#     count = User.objects.all().count()
-#     assert count == 1
-#
-#
-def test_superuser_creation(new_superuser):
+def test_user_creation(new_user):
     count = User.objects.all().count()
     assert count == 2
+#
+#
+# def test_superuser_creation(new_superuser):
+#     count = User.objects.all().count()
+#     assert count == 1
 
 #
 # def test_user_creation1(new_user):
