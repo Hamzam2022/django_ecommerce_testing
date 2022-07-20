@@ -37,7 +37,8 @@ client = APIClient()
 #         password="super-secret"
 #     )
 #     client.post("/api/users/register/", payload)
-#     response = client.post("/api/users/login/", dict(username="test11@test.com", password="super-secret"))
+#     response = client.post("/api/users/login/",
+#                            dict(username="test11@test.com", password="super-secret"))
 #     assert response.status_code == 200
 #
 #
@@ -65,15 +66,4 @@ client = APIClient()
 
 
 
-# @pytest.mark.django_db
-# def test_logout():
-#     payload = dict(
-#         name="testing123",
-#         email="test111@test.com",
-#         password="super-secret"
-#     )
-#
-#     client.post("/api/users/register/", payload)
-#     client.post("/api/users/login/", dict(username="test111@test.com", password="super-secret"))
-#     response = client.post("/api/users/logout/")
-#     assert response.status_code == 200
+
