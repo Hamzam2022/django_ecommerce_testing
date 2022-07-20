@@ -29,24 +29,25 @@ client = APIClient()
 
 
 
-# @pytest.mark.django_db
-# def test_login_user():
-#     payload = dict(
-#         name="testing123",
-#         email="test11@test.com",
-#         password="super-secret"
-#     )
-#     client.post("/api/users/register/", payload)
-#     response = client.post("/api/users/login/",
-#                            dict(username="test11@test.com", password="super-secret"))
-#     assert response.status_code == 200
-#
-#
-# @pytest.mark.django_db
-# def test_login_user_fail():
-#     response = client.post("/api/users/login/", dict(username="test11@test.com", password="super-secret"))
-#     assert response.status_code == 401
-#
+@pytest.mark.django_db
+def test_login_user():
+    payload = dict(
+        name="testing123",
+        email="test11@test.com",
+        password="super-secret"
+    )
+    client.post("/api/users/register/", payload)
+    response = client.post("/api/users/login/",
+                           dict(username="test11@test.com", password="super-secret"))
+    assert response.status_code == 200
+
+
+@pytest.mark.django_db
+def test_login_user_fail():
+    response = client.post("/api/users/login/",
+                           dict(username="test11@test.com", password="super-secret"))
+    assert response.status_code == 401
+
 
 # @pytest.mark.django_db
 # def test_get_profile():

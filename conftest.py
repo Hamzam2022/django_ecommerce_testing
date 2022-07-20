@@ -1,11 +1,9 @@
 from datetime import time
-
 import pytest
 from django.contrib.auth.models import User
 from rest_framework.templatetags.rest_framework import data
 from selenium.webdriver.chrome import webdriver
 from selenium.webdriver.chrome.options import Options
-
 from base.models import Product, Order, OrderItem, ShippingAddress, Review
 
 
