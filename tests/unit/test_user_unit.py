@@ -1,6 +1,7 @@
 import pytest
 from django.contrib.auth.models import User
 
+
 #
 def test_user_creation(new_user):
     count = User.objects.all().count()
@@ -42,14 +43,11 @@ def test_delete_superuser(new_superuser):
     assert count == 0
 
 
-
-
-
-# def test_superuser_details(new_superuser):
-#     assert new_superuser.is_staff
-#     assert new_superuser.is_superuser
-#     assert new_superuser.is_active
-#     assert new_superuser.username == "test@test.com"
-#     assert new_superuser.first_name == "test_name"
-#     assert new_superuser.last_name == "lastname"
-#     assert new_superuser.email == "test@test.com"
+def test_superuser_details(new_superuser):
+    assert new_superuser.is_staff
+    assert new_superuser.is_superuser
+    assert new_superuser.is_active
+    assert new_superuser.username == "test@test.com"
+    assert new_superuser.first_name == "test_name"
+    assert new_superuser.last_name == "lastname"
+    assert new_superuser.email == "test@test.com"
