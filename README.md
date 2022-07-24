@@ -53,3 +53,9 @@ A completely customized eCommerce / shopping cart application using Django, REAC
 - Jira
 
 
+###  Tests Screenshots
+![ss](./screenshots/jenkins.png)
+![ss](./screenshots/allure report.png)
+![ss](./screenshots/jira.png)
+
+
