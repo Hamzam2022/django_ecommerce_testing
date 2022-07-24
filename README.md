@@ -1,4 +1,4 @@
-<h1 align=center>E-Commerce Website with Django + React </h1>
+<h1 align=center>Testing E-Commerce Website with (Django framework) </h1>
 <h2 align=center>Mobile Store</h2>
 
 ### How to Run ️
