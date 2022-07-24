@@ -7,3 +7,4 @@ drivers/chromedriver.exe
 db.sqlite3
 Procfile
 .pytest_cache
+jira.txt

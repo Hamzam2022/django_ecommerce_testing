@@ -1,21 +1,18 @@
-<h1 align=center>E-Commerce Website with Django + React & Redux</h1>
-<h2 align=center>Otaku House - Anime Merchandise and Cosplay Shop</h2>
+<h1 align=center>E-Commerce Website with Django + React </h1>
+<h2 align=center>Mobile Store</h2>
 
-## ✨ [Live Link - Otaku House](https://otakuhouse.herokuapp.com/)
-
-### How to Run 🏃‍♀️
+### How to Run ️
 
 ```shell
 1 Clone This Repo
-2 cd backend
-3 python -m venv env
-4 .\env\Scripts\activate
-5 pip install -r requirements.txt 
-6 python manage.py runserver
+2 python -m venv env
+3 .\env\Scripts\activate
+4 pip install -r requirements.txt 
+5 python manage.py runserver
 
 ```
 
-### 📷 Project Screenshots
+###  Project Screenshots
 
 ![ss](./screenshots/ss1.png)
 ![ss](./screenshots/ss2.png)
@@ -24,9 +21,9 @@
 ![ss](./screenshots/ss5.png)
 ![ss](./screenshots/ss6.png)
 
-### 🚀 Project Features
+### Project Features
 
-A completely customized eCommerce / shopping cart application using Django, REACT and REDUX with the following functionality:
+A completely customized eCommerce / shopping cart application using Django, REACT with the following functionality:
 
 - Full featured shopping cart
 - Product reviews and Ratings
@@ -40,3 +37,19 @@ A completely customized eCommerce / shopping cart application using Django, REAC
 - Mark orders as a delivered option
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
+
+
+### Tests
+- Unit tests
+- Integration tests
+- E2E tests (using selenium)
+- STP AND STD attached
+
+### Tools
+- Selenium
+- Jenkins
+- Docker
+- NGROK
+- Jira
+
+
