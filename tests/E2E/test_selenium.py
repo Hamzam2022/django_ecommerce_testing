@@ -12,7 +12,7 @@ fake = Faker()
 def chrome_driver_init(request):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    chrome_driver = webdriver.Chrome(executable_path=r"./chromedriver")
+    chrome_driver = webdriver.Chrome(executable_path=r"./drivers/chromedriver")
     request.cls.driver = chrome_driver
     chrome_driver.get('http://localhost:7000/')
     chrome_driver.set_window_size(1552, 832)
@@ -21,25 +21,25 @@ def chrome_driver_init(request):
     chrome_driver.close()
 
 
-@pytest.mark.usefixtures('chrome_driver_init')
-class test_browser_with_selenium(LiveServerTestCase):
-    def test_newUserRegistration(self):
-        self.driver.find_element(By.CSS_SELECTOR, ".nav-link:nth-child(2)").click()
-        self.driver.find_element(By.LINK_TEXT, "Register").click()
-        self.driver.find_element(By.ID, "name").click()
-        name = fake.name()
-        self.driver.find_element(By.ID, "name").send_keys(name)
-        self.driver.find_element(By.ID, "email").click()
-        email = fake.email()
-        self.driver.find_element(By.ID, "email").send_keys(email)
-        self.driver.find_element(By.ID, "password").click()
-        self.driver.find_element(By.ID, "password").send_keys("h1234567")
-        self.driver.find_element(By.ID, "passwordConfirm").click()
-        self.driver.find_element(By.ID, "passwordConfirm").send_keys("h1234567")
-        time.sleep(3)
-        self.driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
-        time.sleep(3)
-        assert self.driver.find_element(By.ID, "username").text == name.upper()
+# @pytest.mark.usefixtures('chrome_driver_init')
+# class test_browser_with_selenium(LiveServerTestCase):
+#     def test_newUserRegistration(self):
+#         self.driver.find_element(By.CSS_SELECTOR, ".nav-link:nth-child(2)").click()
+#         self.driver.find_element(By.LINK_TEXT, "Register").click()
+#         self.driver.find_element(By.ID, "name").click()
+#         name = fake.name()
+#         self.driver.find_element(By.ID, "name").send_keys(name)
+#         self.driver.find_element(By.ID, "email").click()
+#         email = fake.email()
+#         self.driver.find_element(By.ID, "email").send_keys(email)
+#         self.driver.find_element(By.ID, "password").click()
+#         self.driver.find_element(By.ID, "password").send_keys("h1234567")
+#         self.driver.find_element(By.ID, "passwordConfirm").click()
+#         self.driver.find_element(By.ID, "passwordConfirm").send_keys("h1234567")
+#         time.sleep(3)
+#         self.driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
+#         time.sleep(3)
+#         assert self.driver.find_element(By.ID, "username").text == name.upper()
     #
     #
     # def test_login(self):

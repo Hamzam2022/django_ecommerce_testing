@@ -17,12 +17,12 @@
 
 ### 📷 Project Screenshots
 
-![ss](./ss/ss1.png)
-![ss](./ss/ss2.png)
-![ss](./ss/ss3.png)
-![ss](./ss/ss4.png)
-![ss](./ss/ss5.png)
-![ss](./ss/ss6.png)
+![ss](./screenshots/ss1.png)
+![ss](./screenshots/ss2.png)
+![ss](./screenshots/ss3.png)
+![ss](./screenshots/ss4.png)
+![ss](./screenshots/ss5.png)
+![ss](./screenshots/ss6.png)
 
 ### 🚀 Project Features
 

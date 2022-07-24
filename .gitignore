@@ -3,6 +3,7 @@ Dockerfile
 requirements.txt
 pytest.ini
 runtime.txt
-chromedriver.exe
+drivers/chromedriver.exe
 db.sqlite3
 Procfile
+.pytest_cache
